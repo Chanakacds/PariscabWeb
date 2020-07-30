@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Paris Private Cabs</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/card-image-zoom-on-hover.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/tab-menu.css">
+    <link rel="stylesheet" href="assets/css/pricescards.css">
+
+
+
+</head>
+
+<body>
+    <section class="main">
+        <nav class="navbar navbar-light navbar-expand-md fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+					class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: rgba(255,255,255,0.9);">Home</a></li>
+                        <form action="price.php" method="POST">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="booking.php" style="color: rgba(255,255,255,0.9);">Book Now</a></li>
+                        </form>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#" style="color: rgba(255,255,255,0.9);">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto lag-nav social-nav">
+                        <li class="nav-item" role="presentation" href="#">
+                            <a class="nav-link social facebook" href="#"></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link social instagram" href="#"></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link social twitter" href="#"></a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto lag-nav">
+                        <li class="nav-item" role="presentation" href="#">
+                            <a class="nav-link active en-lang" href="#"></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link es-lang" href="#"></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link it-lang" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="overlay" onclick="off()">
+                    <div id="text">
+                        <h2 class="why-overlay-text">Why Choose US ?</h2>
+                        <ul class="why-list">
+                            <li>We are Registered and Approved company by the French Transport Ministry</li>
+                            <li>All our Vehicles are New and not less than 4 years.</li>
+                            <li>Our Rates are Reasonable and we offer you a reliable VIP service</li>
+                            <li>Highly Motivated, Experienced, Friendly Drivers.</li>
+                            <li>Baby seats and Booster seats are FREE of Charge</li>
+                            <li>Baggages are FREE of Charge</li>
+                            <li>NO Hidden Charges</li>
+                            <li>Fully insured services</li>
+                            <li>NO Additional traffic charges</li>
+                            <li>Your Personal details are protected by our secure site</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="why-btn" onclick="on()">
+                    <button class="why">Why Choose US?</button>
+                </div>
+            </div>
+
+            </div>
+
+
+        </nav>
+
+        <form action="booking.php" method="POST">
+            <div class="section-inside">
+                <div class="booking-main">
+                    <div class="sectors">
+                        <div class="New">
+                            <div class="booking-main-places">
+                                <!-- <div class="icon" style="background-color: #ffffff; width: 65px; height: 65px;"> <img src="assets/img/2x/from@2x.png" width="65px" height="65px"> </div> -->
+                                <div class="form-select">
+                                    <select class="custom-select s-select select-from" name="qc_from" id="qc_from" onchange="executeQuickCalc();" required>
+                                
+							    <option value ="0" selected><strong>From</strong></option>
+								<option value="CDG Airport">CDG Airport</option>
+								<option value="Beauvais Airport">Beauvais Airport</option>
+								<option value="Orly Airport">Orly Airport</option>
+								<option value="Paris">Paris or Paris train stations</option>
+								<option value="Disneyland">Disneyland (Any Hotel / Address)</option>
+								<option value="LA DEFENSE">LA DEFENSE</option>
+								<option value="VERSAILLES">VERSAILLES</option>
+								<option value="Parc Asterix">Parc Asterix</option>
+				
+							</select>
+
+                                </div>
+                                <div class="form-select">
+                                    <select class="custom-select s-select select-to" name="qc_to" id="qc_to" onchange="executeQuickCalc();" required>
+				
+								<option value ="0" selected="selected"> To </option>
+								<option value="CDG Airport">CDG Airport</option>
+								<option value="Beauvais Airport">Beauvais Airport</option>
+								<option value="Orly Airport">Orly Airport</option>
+								<option value="Paris">Paris or Paris train stations</option>
+								<option value="Disneyland">Disneyland (Any Hotel / Address)</option>
+								<option value="LA DEFENSE">LA DEFENSE</option>
+								<option value="VERSAILLES">VERSAILLES</option>
+								<option value="Parc Asterix">Parc Asterix</option>
+				
+							</select>
+                                </div>
+                                <div class="form-select">
+                                    <select class="custom-select s-select select-pax " name="qc_passengers" id="qc_passengers" onchange="executeQuickCalc();">
+				
+								<option value="">Pax</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+				
+							</select>
+                                </div>
+                                <div class="display-price-main">
+                                    <div class="display-price" id="qc_result">
+                                        0.00 €
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function executeQuickCalc() {
+                                if ($(qc_from).val() == "" || $(qc_to).val() == "" || $(qc_passengers).val() == "") {} else {
+                                    var url = "price.php";
+
+                                    $("#qc_result").html('<img src="reservations/loading.gif" height="15">').show();
+                                    $.post(url, {
+                                        qc_passengers: $("#qc_passengers").val(),
+                                        qc_from: $("#qc_from").val(),
+                                        qc_to: $("#qc_to").val()
+                                    }, function(data) {
+                                        $("#qc_result").html(data).show();
+                                    });
+                                }
+                            }
+                        </script>
+
+                        <div class="new-new">
+                            <div class="booking-other">
+                                <div class="booking-date_time">
+                                    <div class="booking-date-main">
+                                        <label class="form-label">Date</label>
+                                        <input type="date" name="myDate" class="form-control dateinput" required>
+                                    </div>
+                                </div>
+                                <div class="booking-date_time">
+                                    <div class="booking-time-main">
+                                        <label class="form-label">Time</label>
+                                        <input type="time" name="time" class="form-control timeinput" required>
+                                    </div>
+
+                                </div>
+                                <div class="booking-btn-div-main">
+                                    <div class="booking-btn-div">
+                                        <button type="submit" class="booking-btn">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
+    <section class="prices-card-main">
+        <div class="prices-cards">
+            <div class="price-name">Prices </div>
+            <div class="container price">
+                <div class="content">
+                    <div class="slider slider-1">
+                        <div class="row as">
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 35.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 38.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 39.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 40.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 41.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 42.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 44.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 45.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 47.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 48.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 49.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 50.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 51.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 52.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="strat">
+                                    <div class="image">
+                                        <img src="assets/img/prices/Group 53.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-cars">
+        <div class="our-cars-div ">
+            <h1 class="h1-cars " style="font-family: Roboto, sans-serif;font-weight: bold;color: rgb(57,58,59);font-size: 50px; ">Our Cars
+            </h1>
+            <div class="car-pic-div ">
+                <div class="card shadow " style="width: 20rem; ">
+                    <div class="inner ">
+                        <img src="assets/img/benz 1.png " class="card-img-top " alt="... "></div>
+                    <!-- <div class="card-body text-center ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                            </div> -->
+                </div>
+                <div class="card shadow " style="width: 20rem; ">
+                    <div class="inner ">
+                        <img src="assets/img/benz 2.png " class="card-img-top " alt="... "></div>
+                    <!-- <div class="card-body text-center ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                            </div> -->
+                </div>
+                <div class="card shadow " style="width: 20rem; ">
+                    <div class="inner ">
+                        <img src="assets/img/Bus.png " class="card-img-top " alt="... "></div>
+                    <!-- <div class="card-body text-center ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                            </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-content ">
+        <h1 class="h1-topic "><br><strong>Cheap and reliable Transfer service from All Paris airport to any destinations
+						in France.</strong><br><br></h1>
+        <p class="para1 "><br>We are well experienced and organized transferring from All Major Airports in Paris and Paris hotel, residence, Disneyland door to door service with a Private shuttle service. We do One way, Round Trip and Triple Trip shuttle services, We
+            pick from your Desired place it could be Beauvais airport or from a hotel in Paris, Disneyland or any other places and Drop you to your Destination. We use our luxury vehicles to make your trip to France a Remarkable tour with Pariscabservice.
+            The Driver and the vehicle is reserved just for you. NOW Book with us Two-way trip and get 5 euros reduction immediately or even triple trip and get a 10 euros reduction.<br><br></p>
+    </section>
+
+    <div class="footer-dark ">
+        <footer>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-sm-6 col-md-3 item ">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="# ">Web design</a></li>
+                            <li><a href="# ">Development</a></li>
+                            <li><a href="# ">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item ">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="# ">Company</a></li>
+                            <li><a href="# ">Team</a></li>
+                            <li><a href="# ">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text ">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social ">
+                        <a href="# "><i class="icon ion-social-facebook "></i></a>
+                        <a href="# "><i class="icon ion-social-instagram "></i></a>
+                    </div>
+                </div>
+                <p class="copyright ">Company Name © 2017</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js "></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js "></script>
+    <script src="assets/slick/slick.min.js"></script>
+
+    <script src="assets/js/script.js "></script>
+    <script src="assets/js/pricescards.js"></script>
+
+
+</body>
+
+</html>

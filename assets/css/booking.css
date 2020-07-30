@@ -1,0 +1,104 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.booknow-div {
+    width: 100%;
+    min-height: 400px;
+    background-image: url("../../assets/img/bg-img-small.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.title span.border {
+    border: none;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 18px;
+    font-size: 35px;
+    letter-spacing: 10px;
+}
+
+.booking-form {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+    display: block;
+}
+
+.traval-location-div {
+    display: flex;
+    width: 100%;
+}
+
+.location-h3 {
+    text-align: center;
+}
+
+.lable-form {
+    color: #000000;
+}
+
+.form-select.form-select-booking {
+    padding-left: 0px;
+}
+
+.custom-select.s-select.select-booking {
+    font-size: 1rem;
+    font-weight: normal;
+    height: 40px;
+}
+
+.form-row {
+    padding-top: 10px;
+}
+
+.orderview-h2 {
+    color: #292929;
+    padding-top: 50px;
+}
+
+.orderReview {
+    padding-top: 20px;
+}
+
+.table-th {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.terms-label {
+    font-size: 16px;
+}
+
+.terms {
+    color: royalblue;
+}
+
+.terms:hover {
+    color: #000000;
+}
+
+.place-order-btn {
+    background-color: rgb(0, 0, 0, 0.7);
+    border-color: rgb(0, 0, 0, 0.7);
+    font-size: 15px;
+    font-weight: bold;
+}

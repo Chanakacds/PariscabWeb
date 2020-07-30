@@ -1,0 +1,272 @@
+/* .top {
+    width: 100%;
+    background-color: black;
+    height: 50px;
+} */
+
+
+/* .navbar.navbar-light.navbar-expand-md {
+    height: 56px;
+} */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/img/bg-img-small.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text-div {
+    width: 500px;
+    height: 500px;
+}
+
+.navbar-light .navbar-brand {
+    background-image: url("../../assets/img/Paris%20cab%20trans%20logo.png");
+    width: 165px;
+    height: 51px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-link.social.facebook {
+    background-image: url("../../assets/img/facebook.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-link.social.instagram {
+    background-image: url("../../assets/img/instagram.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-link.social.twitter {
+    background-image: url("../../assets/img/twitter.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-link.active.en-lang {
+    background-image: url("../../assets/img/en.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link.es-lang {
+    background-image: url("../../assets/img/es.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link.it-lang {
+    background-image: url("../../assets/img/it.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.why {
+    align-self: flex-end;
+    width: fit-content;
+    text-align: center;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.why:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.nav.navbar-nav.mx-auto {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+}
+
+.navbar.navbar-light.navbar-expand-md {
+    background-color: rgba(175, 175, 175, 0.7);
+}
+
+.h1-topic {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    background-color: rgba(13, 13, 13, 0.31);
+}
+
+.main-content {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.74);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.para1 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    padding-right: 21px;
+    padding-left: 10px;
+}
+
+.nav-tab-div {
+    width: 500px;
+    padding-top: 150px;
+    height: 500px;
+}
+
+.our-cars {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.h1-cars {
+    text-align: center;
+}
+
+.car-pic-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-div {
+    margin-top: 150px;
+    height: 319px;
+    border-radius: 20px;
+    /* background-color: rgba(91,91,91,0.48); */
+}
+
+.h1-text-div {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.box-list {
+    color: #000000;
+    margin-top: 10px;
+}
+
+.price-name {
+    display: block;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.74);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* overlay */
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.why-list {
+    list-style-type: disc;
+}
+
+.why-overlay-text {
+    font-weight: bold;
+}
+
+
+/* media */
+
+@media (min-width: 768px) {
+    .main {
+        background-image: url("../../assets/img/bg-img-large.jpg");
+        width: 100%;
+    }
+}
+
+@media(max-width :500px) {
+    .main {
+        width: 100%
+    }
+}
+
+@media(max-width: 768px) {
+    .main-text-div {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav.navbar-nav.ml-auto.lag-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .nav.navbar-nav.ml-auto.lag-nav.social-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #text {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        font-size: 10px;
+        color: white;
+        transform: translate(-40%, -40%);
+        -ms-transform: translate(-40%, -40%);
+    }
+}
